@@ -1,0 +1,319 @@
+var number=5; //in-line comment
+/*this is a
+multi-line comment
+ */
+var myName= "beau"
+myName = 8
+
+let ourName = "freecodecamp"
+
+const pi = 3.14
+// const kan aldri endre seg
+
+
+// declaring:
+var a;
+
+
+//assigning and declaring
+var b=2;
+
+a=7;
+
+b=a;
+
+console.log(a)
+
+var a=5;
+var b=10;
+var c="i am a ";
+
+c = c+"String!"
+
+console.log(c)
+
+var myVar=87;
+//myVar=myVar+1;
+
+
+//enklere måte er å skrive
+myVar++;
+console.log(myVar)
+//Samme med minus
+
+
+remainder = 11 % 3
+console.log (remainder)
+
+
+/*i stedenfor å skrive
+var a = a+12, kan man skrive*/
+a+=12
+console.log(a)
+//samme med -=, *= og %=
+
+
+//double quotes
+var myString = "I am a \"double quoted\" string inside \"double quotes\""
+console.log(myString)
+
+
+//flere linjer
+var myLine="Firstline\n\t\\SecondLine\nThirdline"
+console.log(myLine)
+// \t betyr tab og \n betyr new line
+
+
+//kombinere en string og en variabel
+var myName= "Julie";
+var myStr= "Hello, my name is " + myName + ", how are you?";
+console.log(myStr)
+
+
+//kombinere to strings til en setning
+var etAdjektiv = "worth it";
+var myStri = "learning to code is ";
+myStri += etAdjektiv;
+console.log(myStri)
+
+
+//finne lengde på en string
+var firstName = "hackerwom&an"
+firstNameLength = firstName.length;
+console.log (firstNameLength);
+
+
+//finne første bokstav i en string
+firstLetterOfFirstName = firstName[0];
+console.log(firstLetterOfFirstName);
+/*hvis du ikke vet hvor mange bokstaver det er i stringen, kan du skrive
+= firstName[firstName.length - 1(eller leddet du vil ha)]
+ */
+
+
+//finne bokstav i en string
+var txt = "abcdefghijklm";
+var pos = txt.indexOf("h");
+console.log(pos)
+
+
+//"slice" ord i en string for å returnere ett av ordene (slice method)
+var txt = "I can eat bananas all day";
+var x = txt.slice(10,17);
+console.log(x)
+
+
+//bytte ut et ord i en string med et annet (correct String method)
+var txt = "Hello World"
+txt = txt.replace("Hello", "Welcome")
+console.log(txt)
+
+
+//gjøre om bokstavene i en string til store bokstaver, samme med toLowerCase()
+var txt = "Hello world!";
+txt = txt.toUpperCase();
+console.log(txt)
+
+
+//returnere en verdi fra en array
+var cars = ["Saab", "Volvo", "BMW"];
+var x = cars[1]
+console.log(x)
+
+
+//bytte ut en verdi i en array med en annen verdi
+var cars = ["Volvo", "Jeep", "Mercedes"];
+cars [0] = "Ford";
+console.log(cars)
+
+
+//fjerne en verdi fra en array
+var fruits = ["Banana", "Orange", "Apple"];
+fruits.pop();
+console.log(fruits)
+
+
+//Legge til en verdi til en array
+var fruits = ["Banana", "Orange", "Apple"];
+fruits.push("Kiwi");
+console.log(fruits)
+
+
+//splice-metoden til fjerning av verdier i en array (fjerne 1 og 2)
+var fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+fruits.splice(1,2);
+console.log(fruits)
+
+
+//Sortere arrays alfabetisk
+var fruits = ["Banana", "Orange", "Apple", "Kiwi"];
+fruits.sort();
+console.log(fruits)
+
+
+//Lage et tilfeldig nummer
+var r = Math.random();
+console.log(r)
+
+
+//Returnere det største nummeret av to tall
+var x = Math.max(10,20);
+console.log(x)
+
+
+/*
+LAGE EN KNAPP SOM VISER TIDEN OG DATOEN
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+</body>
+</html>
+
+
+
+LAGE EN KNAPP SOM VISER OM 10 ER STØRRE ENN 9
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Display the value of Boolean(10 > 9)</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = Boolean(10 > 9);
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+LAGE EN KNAPP(OBJEKT) SOM VISER NØYAKTIG TIDSPUNKT OG DATO
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p>new Date() creates a new date object with the current date and time:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html>
+*/
+
+//adjektivhistorie
+function wordblanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result="";
+    result+= "The " + myAdjective + " " + myNoun + " " + myVerb + " to the beach " + myAdverb;
+    return result;
+}
+console.log(wordblanks("menneske", "dement", "husker", "lite"))
+
+
+let f= function() {
+    this.a = 1;
+    this.b = 2;
+}
+let o = new f();
+f.prototype.b = 3;
+f.prototype.c = 4;
+
+console.log(o.c);
+
+
+var a = 6;
+function test(){
+    var a=7;
+    function again(){
+        var a = 8;
+        console.log(a);
+    }
+    again()
+    console.log(a);
+}
+test();
+console.log(a);
+
+
+var myArr = ["foo","bar","baz"];
+    myArr[2];
+console.log ("2" in myArr);
+
+
+
+function car (make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+var newCar = new car ('Honda', 'City', 2007);
+
+console.log(newCar instanceof car);
+
+
+function secretFunction(num){
+
+    if(num <=1) return 1;
+
+    return secretFunction(num-1)+secretFunction(num-2)
+}
+secretFunction(5)
+
+var x = 21;
+var result = 0;
+
+//oppgave 13
+var a = 5;
+function first(){
+    a = 6;
+}
+function second(){
+    console.log(a);
+}
+first();
+second();
+
+function bar() {
+    return "works";
+    foo = 10;
+}
+    function foo() {
+        var foo = '11';
+        return foo;
+    }
+console.log(bar());
+console.log(foo());
+
+
+
+
+
+var myArr = ['foo', 'bar', 'baz'];
+    myArr.length = 0;
+    myArr.push('bin');
+
+console.log(myArr);
+
+
